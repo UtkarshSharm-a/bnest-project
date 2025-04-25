@@ -1,0 +1,2775 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links a.active {
+  font-weight: 700;
+  color: rgb(37, 37, 37);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.fotter {
+  height: auto;
+  width: 100%;
+}
+
+
+.middle-fotter {
+  width: 100%;
+  background-color: rgb(4, 4, 4);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4rem 10rem;
+  gap: 2rem;
+  color: white;
+  text-align: left;
+  border-bottom: 1px solid rgb(251, 250, 250);
+}
+
+.middle-fotter-1,
+.middle-fotter-2,
+.middle-fotter-3,
+.middle-fotter-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.middle-fotter-1 {
+  width: 30%;
+}
+
+.middle-fotter-1 .benest {
+  width: 8vw;
+  height: auto;
+}
+
+.middle-fotter-1 h3 {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.middle-fotter-1-smart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.middle-fotter-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.middle-fotter-icon i {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+
+.middle-fotter-2 h2,
+.middle-fotter-3 h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.middle-fotter-4 img {
+  width: 13vw;
+  height: auto;
+}
+
+.bottom-fotter {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5vw;
+  flex-wrap: wrap;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bottom-fotter p {
+  font-size: 1rem;
+  margin: 0.5rem;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .middle-fotter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .middle-fotter-1,
+  .middle-fotter-2,
+  .middle-fotter-3,
+  .middle-fotter-4 {
+    width: 50%;
+    align-items: center;
+  }
+
+  .middle-fotter-1 .benest {
+    width: 25vw;
+    height: auto;
+  }
+
+  .middle-fotter-1-smart .line {
+    display: none;
+  }
+
+  .middle-fotter-1-smart {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middle-fotter-icon {
+    justify-content: center;
+  }
+
+  .middle-fotter-4 img {
+    width: 80%;
+  }
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .middle-fotter {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+
+  .middle-fotter-1,
+  .middle-fotter-2,
+  .middle-fotter-3,
+  .middle-fotter-4 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .middle-fotter-1 .benest {
+    width: 35vw;
+    height: auto;
+  }
+
+  .middle-fotter-4 img {
+    width: 80%;
+  }
+
+  .middle-fotter-icon {
+    justify-content: center;
+  }
+
+
+  .bottom-fotter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+  }
+
+  .bottom-fotter p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: space-between;
+    order: 0;
+  }
+
+  .hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding-left: 5px;
+  }
+
+  h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 230px;
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .middle-fotter-4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle-fotter-4 iframe {
+    width: 230px;
+    height: 200px;
+  }
+
+  h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    width: 230px;
+    height: 200px;
+  }
+
+}
+
+
+.section-three .bg-image-2 {
+  background-image: url('../page-images/about/Group\ 191.png');
+  background-size: cover;
+  width: 100%;
+  height: 459px;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+
+.section-three h1 {
+  font-size: 2.8rem;
+  margin-bottom: -30px;
+  margin-left: -30px;
+  line-height: 1.2;
+  color: #fff;
+  text-align: left;
+  flex-direction: column;
+  align-items: left;
+}
+
+
+.highlight-text {
+  color: #9F5A9B;
+}
+
+.section-three button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #9F5A9B;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 80px;
+  margin-left: -30px;
+}
+
+.section-three button:hover {
+  background-color: #b85a9b;
+  transform: translateY(-2px);
+}
+
+/* .////// nav and foooter all code in upper side */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-transforming {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.top-transforming-left,
+.top-transforming-right {
+  width: 50%;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.top-transforming-left h2 span {
+  color: #9f5a9b;
+}
+
+.top-transforming-left img,
+.top-transforming-right img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.top-transforming-right img {
+  margin-left: 4rem;
+}
+
+.top-transforming-left h2 {
+  font-size: 4.4rem;
+  margin-top: 1rem;
+  color: rgb(20, 20, 20);
+  width: 100%;
+}
+
+.top-transforming-left p {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: rgb(16, 15, 15);
+  line-height: 1.6;
+  width: 80%;
+  letter-spacing: 1px;
+
+}
+
+
+/* ////bottom-Gorment css */
+.bottom-Gorment {
+  min-height: 65vh;
+  width: 100%;
+  /* background-color: rgb(134, 218, 229); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* for responsiveness */
+  box-sizing: border-box;
+}
+
+.bottom-Gorment-left {
+  width: 50%;
+  height: 63vh;
+  /* background-color: red; */
+  box-sizing: border-box;
+}
+
+.bottom-Gorment-left .bottom-Gorment-left-p {
+  font-size: 1.3rem;
+  width: 85%;
+  line-height: 1.7;
+  color: #333;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  /* margin-top: 1rem; */
+  word-break: break-word;
+  /* 💡 helps prevent overflow */
+  overflow-wrap: break-word;
+}
+
+.bottom-Gorment-right {
+  width: 50%;
+  height: 63vh;
+  box-sizing: border-box;
+  /* background-color: rgb(120, 174, 81); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-Gorment-right-center {
+  height: 49vh;
+  width: 58%;
+  background-color: #9f5a9d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 6rem;
+
+
+}
+
+.bottom-Gorment-center-img {
+  height: 100%;
+  width: 100%;
+  margin-top: 8rem;
+  margin-right: 8rem;
+  object-fit: contain;
+  /* helps maintain aspect ratio */
+}
+
+/* This block was unused and slightly confusing, so cleaned it */
+.bottom-Gorment-right-img {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* background-color: red; */
+}
+
+.bottom-Gorment-right-img img {
+  margin: 2rem 2rem 0rem 0rem;
+}
+
+
+/* Base styles for larger screens */
+.mission-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  /* background-color: red; */
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.mission-center-left {
+  width: 40%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-center-left-img {
+  width: 65%;
+  aspect-ratio: 1 / 1;
+  background-color: #fbe16d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-center-left-img-diffrent-color {
+  background-color: #c59cc4;
+
+
+}
+
+.mission-center-left-img-white {
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-center-left-img-white img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.mission-center-right {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  /* background-color: #935ec9; */
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+
+.mission-center-right-text {
+  width: 100%;
+  max-width: 750px;
+
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 0.5rem;
+
+}
+
+.mission-center-right-text h2 {
+  font-size: 3rem;
+  margin: 0;
+  /* <- this keeps spacing tight & consistent */
+}
+
+.mission-center-right-text p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  /* <- prevent extra vertical gap */
+  letter-spacing: 1px;
+  word-break: break-word;
+}
+
+/* .board-directors code */
+
+.board-directors {
+  height: 160vh;
+  width: 100%;
+  /* background-color: red; */
+  background: linear-gradient(to right, #fdd2d6, #ec9dc3);
+
+
+}
+
+.board-directors-first h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+}
+
+.board-directors-first h2 span {
+  color: #b85a9b;
+
+}
+
+.board-directors-first-img {
+  height: 23vw;
+  width: 18vw;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.board-directors-first-img-center {
+  height: 25vw;
+  width: 100%;
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  /* justify-content: center; */
+  justify-content: space-between;
+  padding: 0rem 10rem;
+
+
+}
+
+.board-directors-first-img h3 {
+  width: 80%;
+  text-align: center;
+  margin-top: 1rem;
+
+
+}
+
+.board-directors-first-img p {
+  text-align: center;
+}
+
+.board-directors-first-img-div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.board-directors-first-img-div {
+  height: 16vw;
+  width: 16.5vw;
+  /* background-color: green; */
+  border-radius: 15px;
+}
+
+.board-directors-first-img-center {
+  flex-wrap: wrap;
+}
+
+
+/* ///second section */
+.board-directors-second {
+  height: 18vw;
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-directors-second-text {
+  height: 100%;
+  width: 70%;
+  /* background-color: rgb(111, 124, 111); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .3rem;
+
+}
+
+.board-directors-second-text h2 {
+  font-size: 2.5rem;
+
+}
+
+.board-directors-second-text h2 span {
+  color: #b85a9b;
+  font-size: 2.5rem;
+
+}
+
+.board-directors-second-text h3 {
+  font-size: 1.6rem;
+}
+
+.board-directors-second-text h3 span {
+  color: #b85a9b;
+  margin-right: .3rem;
+
+}
+
+.board-directors-second-text p {
+  font-size: 1.3rem;
+}
+
+.wyreflow-technology {
+  height: 70vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+}
+
+.wyreflow-technology-left {
+  height: 100%;
+  width: 40%;
+  /* background-color: green; */
+  position: relative;
+}
+
+.wyreflow-technology-left-1 {
+  height: 85%;
+  width: 80%;
+  /* background-color: red; */
+  position: absolute;
+  bottom: 0;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.wyreflow-technology-left-2 {
+  height: 60%;
+  width: 65%;
+  /* background-color: green; */
+  position: absolute;
+  bottom: 0;
+  z-index: 8;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.wyreflow-technology-left-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.wyreflow-technology-left-3 {
+  height: 80%;
+  width: 80%;
+  /* background-color: rgb(41, 102, 152); */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+
+.wyreflow-technology-left-3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.wyreflow-technology-right {
+  height: 100%;
+  width: 60%;
+  /* background-color: rgb(43, 158, 184); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wyreflow-technology-right-top {
+  height: 80%;
+  width: 100%;
+  /* background-color: rgb(169, 91, 198); */
+  padding: 4rem 4rem;
+}
+
+.wyreflow-technology-right-top-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 4rem;
+}
+
+.wyreflow-technology-right-top-1 h2 {
+  font-size: 2rem;
+}
+
+.wyreflow-technology-right-top-1 h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.wyreflow-technology-right-top-2 {
+  display: flex;
+  align-items: center;
+}
+
+.wyreflow-technology-right-top-2 img {
+  height: 10%;
+  width: 10%;
+  margin-bottom: 3rem;
+}
+
+.wyreflow-technology-right-top-2 p {
+  width: 60%;
+}
+
+.wyreflow-technology-right-top-3 {
+  height: 3vw;
+  width: 100%;
+  position: relative;
+}
+
+.wyreflow-technology-right-top-3-dobble {
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+  gap: .7rem;
+
+}
+
+.wyreflow-technology-right-top-3-dobble i {
+  border: 1px solid black;
+  padding: 0.8rem 1rem;
+  /* Equal padding makes it square */
+  border-radius: 50%;
+  /* Makes it circular */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wyreflow-technology-right-top-4 {
+  height: .4vw;
+  width: 100%;
+}
+
+.wyreflow-technology-right-top-4 img {
+  height: 100%;
+  width: 90%;
+  margin-left: 4rem;
+}
+
+/* /////.wyreflow-technology */
+
+
+/* Base styles */
+.wyreflow-technology {
+  height: 70vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wyreflow-technology-left {
+  height: 100%;
+  width: 40%;
+  /* background-color: green; */
+  position: relative;
+}
+
+.wyreflow-technology-left-1 {
+  height: 85%;
+  width: 80%;
+  /* background-color: red; */
+  position: absolute;
+  bottom: 0;
+  margin-left: 4rem;
+}
+
+.wyreflow-technology-left-2 {
+  height: 60%;
+  width: 65%;
+  /* background-color: green; */
+  position: absolute;
+  bottom: 0;
+  z-index: 8;
+}
+
+.wyreflow-technology-left-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.wyreflow-technology-left-3 {
+  height: 80%;
+  width: 80%;
+  /* background-color: rgb(41, 102, 152); */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+
+.wyreflow-technology-left-3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.wyreflow-technology-right {
+  height: 100%;
+  width: 60%;
+  /* background-color: rgb(43, 158, 184); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wyreflow-technology-right-top {
+  height: 80%;
+  width: 100%;
+  /* background-color: rgb(169, 91, 198); */
+  padding: 4rem;
+}
+
+.wyreflow-technology-right-top-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 4rem;
+}
+
+.wyreflow-technology-right-top-1 h2 {
+  font-size: 2rem;
+}
+
+.wyreflow-technology-right-top-1 h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.wyreflow-technology-right-top-2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wyreflow-technology-right-top-2 img {
+  height: 10%;
+  width: 10%;
+  margin-bottom: 3rem;
+}
+
+.wyreflow-technology-right-top-2 p {
+  width: 60%;
+}
+
+.wyreflow-technology-right-top-3 {
+  height: 3vw;
+  width: 100%;
+  position: relative;
+}
+
+.wyreflow-technology-right-top-3-dobble {
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+}
+
+.wyreflow-technology-right-top-3-dobble i {
+  border: 1px solid black;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wyreflow-technology-right-top-4 {
+  height: .4vw;
+  width: 100%;
+}
+
+.wyreflow-technology-right-top-4 img {
+  height: 100%;
+  width: 90%;
+  margin-left: 4rem;
+}
+
+
+
+/* ///.wyreflow-technology responsive in top */
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .wyreflow-technology {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .wyreflow-technology-left,
+  .wyreflow-technology-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .wyreflow-technology-left-1 {
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .wyreflow-technology-left-2,
+  .wyreflow-technology-left-3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .wyreflow-technology-right-top {
+    padding: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 {
+    margin-left: 0;
+  }
+
+  .wyreflow-technology-right-top-2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wyreflow-technology-right-top-2 img {
+    width: 15%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .wyreflow-technology-right-top-2 p {
+    width: 100%;
+  }
+
+  .wyreflow-technology-right-top-3-dobble {
+    position: static;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .wyreflow-technology-right-top-4 img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .wyreflow-technology {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .wyreflow-technology-left,
+  .wyreflow-technology-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .wyreflow-technology-left-1 {
+    position: relative;
+    margin: 2rem auto;
+    height: auto;
+  }
+
+  .wyreflow-technology-left-2,
+  .wyreflow-technology-left-3 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .wyreflow-technology-left-2 img,
+  .wyreflow-technology-left-3 img {
+    height: auto;
+    width: 100%;
+  }
+
+  .wyreflow-technology-right-top {
+    padding: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wyreflow-technology-right-top-1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .wyreflow-technology-right-top-1 h3 {
+    font-size: 1.5rem;
+  }
+
+  .wyreflow-technology-right-top-2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wyreflow-technology-right-top-2 img {
+    height: 50px;
+    width: 50px;
+    margin: 1rem 0;
+  }
+
+  .wyreflow-technology-right-top-2 p {
+    width: 90%;
+  }
+
+  .wyreflow-technology-right-top-3 {
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .wyreflow-technology-right-top-4 {
+    height: auto;
+  }
+
+  .wyreflow-technology-right-top-4 img {
+    width: 80%;
+    margin: 2rem auto 0;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .wyreflow-technology-right-top-1 {
+    margin-left: 0;
+    text-align: center;
+    /* center text inside the container */
+    align-items: center;
+    /* ensures flex children (h2, h3) are centered */
+  }
+
+  .wyreflow-technology-right-top-1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .wyreflow-technology-right-top-1 h3 {
+    font-size: 1.2rem;
+  }
+
+  .wyreflow-technology-right-top {
+    padding: 1rem;
+  }
+
+  .wyreflow-technology-left-2 {
+    display: none;
+  }
+
+  .wyreflow-technology-right-top-3-dobble i {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+    gap: 1rem;
+  }
+
+  .wyreflow-technology-left-1 {
+    margin-left: 0;
+  }
+}
+
+
+/* Tablet Devices (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .wyreflow-technology {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .wyreflow-technology-left,
+  .wyreflow-technology-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .wyreflow-technology-right-top {
+    padding: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 {
+    margin-left: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .wyreflow-technology-right-top-1 h3 {
+    font-size: 1.4rem;
+  }
+
+  .wyreflow-technology-right-top-2 p {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .wyreflow-technology-left-1,
+  .wyreflow-technology-left-2,
+  .wyreflow-technology-left-3 {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 1rem auto;
+  }
+}
+
+/* Tablet Responsiveness (768px to 1114px) */
+@media (min-width: 768px) and (max-width: 1114px) {
+  .wyreflow-technology {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .wyreflow-technology-left,
+  .wyreflow-technology-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .wyreflow-technology-left-1,
+  .wyreflow-technology-left-2,
+  .wyreflow-technology-left-3 {
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .wyreflow-technology-left-1 {
+    margin-left: 0;
+  }
+
+  .wyreflow-technology-right-top {
+    padding: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 {
+    margin-left: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .wyreflow-technology-right-top-1 h3 {
+    font-size: 1.5rem;
+  }
+
+  .wyreflow-technology-right-top-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .wyreflow-technology-right-top-2 img {
+    width: 20%;
+    height: auto;
+    margin: 0;
+  }
+
+  .wyreflow-technology-right-top-2 p {
+    width: 100%;
+  }
+
+  .wyreflow-technology-right-top-3 {
+    height: auto;
+    margin-left: 3rem;
+  }
+
+  .wyreflow-technology-right-top-4 {
+    height: auto;
+  }
+
+  .wyreflow-technology-right-top-4 img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Tablet Responsiveness (768px to 1114px) */
+@media (min-width: 768px) and (max-width: 1114px) {
+  .wyreflow-technology {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .wyreflow-technology-left,
+  .wyreflow-technology-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .wyreflow-technology-left-1,
+  .wyreflow-technology-left-2,
+  .wyreflow-technology-left-3 {
+    position: relative;
+    width: 90%;
+    margin: 1rem auto;
+    height: auto;
+  }
+
+  /* Center .wyreflow-technology-left-3 on tablets */
+  .wyreflow-technology-left-3 {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wyreflow-technology-right-top {
+    padding: 2rem;
+  }
+
+  .wyreflow-technology-right-top-1 {
+    margin-left: 2rem;
+    margin-top: 4rem;
+  }
+
+  .wyreflow-technology-right-top-1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .wyreflow-technology-left-2 {
+    display: none;
+  }
+
+  .wyreflow-technology-right-top-1 h3 {
+    font-size: 1.5rem;
+  }
+
+  .wyreflow-technology-right-top-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .wyreflow-technology-right-top-2 img {
+    width: 20%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .wyreflow-technology-right-top-2 p {
+    width: 100%;
+  }
+
+
+  .wyreflow-technology-right-top-3,
+  .wyreflow-technology-right-top-4 {
+    height: auto;
+
+  }
+
+  /* .wyreflow-technology-right-top-3{
+    padding: 0rem 3rem;
+  } */
+  .wyreflow-technology-right-top-3-dobble {
+    margin-right: 2rem;
+
+  }
+
+  .wyreflow-technology-right-top-4 img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px),
+(min-width: 768px) and (max-width: 1114px) {
+  .wyreflow-technology-right-top-2 {
+    flex-direction: row;
+    /* Force horizontal layout */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    align-items: flex-start;
+    /* Align items at top */
+    gap: 1rem;
+  }
+
+  .wyreflow-technology-right-top-2 img {
+    width: auto;
+    height: 50px;
+    margin: 0;
+    flex-shrink: 0;
+    display: none;
+    /* Prevent shrinking of image */
+  }
+
+  .wyreflow-technology-right-top-2 p {
+    width: auto;
+    flex: 1;
+    /* Take up remaining space */
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+
+/* ///.wyreflow-technology responsive in top */
+
+
+
+
+
+
+/* ////second responsie */
+
+/* ////second responsie */
+/* Phones (up to 768px) */
+@media (max-width: 768px) {
+  .board-directors-second {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .board-directors-second-text {
+    width: 100%;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .board-directors-second-text h2 {
+    font-size: 2rem;
+  }
+
+  .board-directors-second-text h2 span {
+    font-size: 2rem;
+  }
+
+  .board-directors-second-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .board-directors-second-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .board-directors-second {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .board-directors-second-text {
+    width: 90%;
+    gap: 0.5rem;
+  }
+
+  .board-directors-second-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .board-directors-second-text h2 span {
+    font-size: 2.2rem;
+  }
+
+  .board-directors-second-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .board-directors-second-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Laptops / MacBook Air (1025px and up) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .board-directors-second {
+    height: auto;
+    padding: 2rem 4rem;
+  }
+
+  .board-directors-second-text {
+    width: 70%;
+  }
+
+  .board-directors-second-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .board-directors-second-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .board-directors-second-text p {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+/* ////second responsie */
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .board-directors {
+    height: auto;
+    /* prevent overflow */
+    padding: 2rem 1rem;
+  }
+
+  .board-directors-first-img-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    height: auto;
+  }
+
+  .board-directors-first-img {
+    width: 80%;
+    height: auto;
+  }
+
+  .board-directors-first-img-div {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    /* keeps it square */
+  }
+
+  .board-directors-first-img h3,
+  .board-directors-first-img p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .board-directors-first-img-center {
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .board-directors-first-img {
+    width: 22vw;
+    height: auto;
+  }
+
+  .board-directors-first-img-div {
+    width: 100%;
+    height: 18vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .board-directors {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .board-directors-first-img-center {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    height: auto;
+    /* ✅ Fixes the issue */
+  }
+
+  .board-directors-first-img {
+    width: 28vw;
+    height: auto;
+  }
+
+  .board-directors-first-img-div {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .board-directors-first-img h3,
+  .board-directors-first-img p {
+    font-size: 1.05rem;
+  }
+}
+
+
+
+/* 📱 Phones (up to 768px) */
+@media (max-width: 768px) {
+  .board-directors {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .board-directors-first-img-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    height: auto;
+  }
+
+  .board-directors-first-img {
+    width: 80%;
+    height: auto;
+  }
+
+  .board-directors-first-img-div {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .board-directors-first-img h3,
+  .board-directors-first-img p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .board-directors-second {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .board-directors-second-text {
+    width: 100%;
+    gap: .5rem;
+    padding: 1rem;
+  }
+
+  .board-directors-second-text h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .board-directors-second-text h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .board-directors-second-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* 💻 Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .board-directors {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .board-directors-first-img-center {
+    gap: 3rem;
+    padding: 0 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  .board-directors-first-img {
+    width: 20vw;
+    height: auto;
+  }
+
+  .board-directors-first-img-div {
+    width: 100%;
+    height: 20vw;
+  }
+
+  .board-directors-second {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .board-directors-second-text {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .board-directors-second-text h2 {
+    font-size: 2rem;
+  }
+
+  .board-directors-second-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .board-directors-second-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* 🧑‍💻 Laptops & MacBook Air (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .board-directors-first-img-center {
+    gap: 4rem;
+    padding: 0 6rem;
+  }
+
+  .board-directors-first-img {
+    width: 20vw;
+    height: auto;
+  }
+
+  .board-directors-first-img-div {
+    width: 100%;
+    height: 17vw;
+  }
+
+  .board-directors-second {
+    height: auto;
+  }
+
+  .board-directors-second-text {
+    width: 80%;
+  }
+}
+
+
+
+
+/* ////nav bar responsive */
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: space-between;
+    order: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding-left: 5px;
+  }
+}
+
+
+
+/* 🔁 1280px - MacBook Air */
+@media (max-width: 1280px) {
+
+  .top-transforming-left,
+  .top-transforming-right {
+    padding: 3rem 2.5rem;
+  }
+
+  .top-transforming-left h2 {
+    font-size: 3.2rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* 🔁 1024px - Tablets Landscape */
+@media (max-width: 1024px) {
+  .top-transforming-left h2 {
+    font-size: 2.8rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  .top-transforming-right img {
+    margin-left: 2rem;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    padding: 2.5rem;
+  }
+}
+
+
+/* 🔁 768px - Tablets Portrait */
+@media (max-width: 768px) {
+  .top-transforming {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .top-transforming-left h2 {
+    font-size: 2rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 0.9rem;
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .top-transforming-right img {
+    margin: 2rem auto 0;
+  }
+}
+
+/* 🔁 820px - 834px | iPad Air 4, iPad Pro 11", etc. */
+@media (min-width: 820px) and (max-width: 834px) {
+  .top-transforming {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    width: 100%;
+    padding: 2rem 3rem;
+  }
+
+  .top-transforming-left h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 0.95rem;
+    width: 90%;
+    margin: 1.5rem auto;
+    line-height: 1.6;
+  }
+
+  .top-transforming-right img {
+    max-width: 80%;
+    height: auto;
+    margin: 2rem auto 0;
+    display: block;
+  }
+}
+
+/* 🔁 800px - 833px | Smaller tablets in landscape (e.g., older iPads, Galaxy Tab) */
+@media (min-width: 800px) and (max-width: 833px) {
+  .top-transforming {
+    flex-direction: column;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    width: 100%;
+    padding: 2rem 2.5rem;
+  }
+
+  .top-transforming-left h2 {
+    font-size: 2.5rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 0.95rem;
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .top-transforming-right img {
+    max-width: 80%;
+    margin: 2rem auto 0;
+  }
+}
+
+
+/* 🔁 834px - 1023px | iPad Air 4, iPad Pro 11", Surface Go */
+@media (min-width: 834px) and (max-width: 1023px) {
+  .top-transforming {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    width: 100%;
+    padding: 2.5rem 4rem;
+  }
+
+  .top-transforming-left h2 {
+    font-size: 2.8rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 1rem;
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .top-transforming-right img {
+    max-width: 75%;
+    margin: 2rem auto 0;
+    display: block;
+  }
+}
+
+
+/* 🔁 1024px - 1194px | iPad Pro 12.9", MacBook Air in scaled mode */
+@media (min-width: 1024px) and (max-width: 1194px) {
+  .top-transforming {
+    flex-direction: row;
+    padding-top: 90px;
+    text-align: left;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    width: 50%;
+    padding: 3rem;
+  }
+
+  .top-transforming-left h2 {
+    font-size: 3rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .top-transforming-right img {
+    max-width: 90%;
+    margin-left: 2rem;
+  }
+}
+
+
+
+
+
+/* 🔁 480px - Mobile */
+@media (max-width: 480px) {
+  .top-transforming-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .top-transforming-left p {
+    font-size: 0.85rem;
+  }
+
+  .top-transforming-left,
+  .top-transforming-right {
+    padding: 1.2rem;
+  }
+
+  .top-transforming-right img {
+    margin: 1.5rem auto 0;
+  }
+}
+
+
+
+
+
+
+/* ///fotter responsive */
+
+/* Tablet & Phone responsive layout */
+@media (max-width: 768px) {
+  .bottom-fotter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+  }
+
+  .bottom-fotter p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+/* 🟢 Phone view: max 767px */
+@media (max-width: 767px) {
+  .middle-fotter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .middle-fotter-1,
+  .middle-fotter-2,
+  .middle-fotter-3,
+  .middle-fotter-4 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .middle-fotter-1 .benest {
+    width: 25vw;
+    height: auto;
+  }
+
+  .middle-fotter-1-smart .line {
+    display: none;
+  }
+
+  .middle-fotter-1-smart {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middle-fotter-icon {
+    justify-content: center;
+  }
+
+  .middle-fotter-4 img {
+    width: 80%;
+  }
+}
+
+/* ✅ Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .middle-fotter {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 4rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .middle-fotter-1,
+  .middle-fotter-2,
+  .middle-fotter-3,
+  .middle-fotter-4 {
+    width: 45%;
+    align-items: center;
+  }
+
+  .middle-fotter-1 .benest {
+    width: 20vw;
+    height: auto;
+  }
+
+  .middle-fotter-4 img {
+    width: 100%;
+  }
+
+  .middle-fotter-icon,
+  .middle-fotter-1-smart {
+    justify-content: center;
+  }
+}
+
+/* ✅ Laptops & MacBook Air (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .middle-fotter {
+    padding: 3rem 6rem;
+    gap: 2rem;
+  }
+
+  .middle-fotter-1 .benest {
+    width: 18vw;
+    height: auto;
+  }
+
+  .middle-fotter-4 img {
+    width: 13vw;
+  }
+}
+
+
+/* ////bottom-Gorments */
+/* Tablet (768px to 1024px) */
+/* Tablets (768px to 1024px) */
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+  .bottom-Gorment {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .bottom-Gorment-left,
+  .bottom-Gorment-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-Gorment-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1.2rem;
+    width: 90%;
+    padding: 1.5rem;
+    margin-top: 0;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 70%;
+    height: auto;
+    margin-bottom: 3rem;
+  }
+
+  .bottom-Gorment-center-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* Phones (up to 767px) */
+@media (max-width: 767px) {
+  .bottom-Gorment {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .bottom-Gorment-left,
+  .bottom-Gorment-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-Gorment-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1rem;
+    width: 90%;
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 85%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .bottom-Gorment-center-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* MacBook Air (1280px and above) */
+/* MacBook Air (1280px and slightly above) */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .bottom-Gorment-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    width: 80%;
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 55%;
+    height: 49vh;
+    margin-bottom: 4rem;
+  }
+
+  .bottom-Gorment-center-img {
+    margin-top: 6rem;
+    margin-right: 4rem;
+  }
+
+  .board-directors-first-img-center {
+    margin-top: 4rem;
+  }
+}
+
+/* Fix for MacBook Air screens (1280px and a bit beyond) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    width: 90%;
+    /* make it more flexible */
+    padding: 0 2rem;
+    /* reduce horizontal padding */
+    margin: 0 auto;
+    /* center horizontally */
+    word-break: break-word;
+    /* break long words if any */
+  }
+}
+
+
+/* --------------------------- */
+/* 📱 Phones (up to 768px) */
+/* --------------------------- */
+@media (max-width: 768px) {
+  .bottom-Gorment {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .bottom-Gorment-left,
+  .bottom-Gorment-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 80%;
+    height: auto;
+    margin: 2rem 0 0 0;
+    background-color: transparent;
+  }
+
+  .bottom-Gorment-center-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* ---------------------------- */
+/* 💻 Tablets (769px–1024px) */
+/* ---------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bottom-Gorment {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .bottom-Gorment-left,
+  .bottom-Gorment-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1.1rem;
+    width: 90%;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 60%;
+    height: auto;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .bottom-Gorment-center-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* -------------------------------------- */
+/* 🖥️ Laptops / MacBook Air (1025–1440px) */
+/* -------------------------------------- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .bottom-Gorment {
+    padding: 3rem 4rem;
+  }
+
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1.2rem;
+    width: 85%;
+    padding: 0 3rem;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 60%;
+    height: 45vh;
+    margin-bottom: 4rem;
+  }
+
+  .bottom-Gorment-center-img {
+    margin-top: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+/* ------------------------------------ */
+/* 💻 Mid Screens (1025px to 1150px fix) */
+/* ------------------------------------ */
+@media (min-width: 1025px) and (max-width: 1150px) {
+  .bottom-Gorment-left .bottom-Gorment-left-p {
+    font-size: 1.15rem;
+    padding: 0 2.5rem;
+  }
+
+  .bottom-Gorment-right-center {
+    width: 65%;
+    height: 42vh;
+    margin-bottom: 3rem;
+  }
+
+  .bottom-Gorment-center-img {
+    margin-top: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+
+
+
+/* ///mission responsive code */
+
+/* Responsive adjustments for tablets and smaller laptops */
+@media (max-width: 768px) {
+  .mission-center {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .mission-center-left,
+  .mission-center-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mission-center-left-img {
+    width: 50%;
+  }
+
+  .mission-center-right-text {
+    padding: 0;
+    /* remove extra padding if any */
+    align-items: center;
+    text-align: center;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2rem;
+    margin: 0;
+    /* 🧼 clean margin */
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 60%;
+    max-height: 60%;
+
+  }
+
+  .mission-center-right-text p {
+    font-size: 1rem;
+    margin: 0.75rem 0 0 0;
+    /* reduced top margin */
+    line-height: 1.5;
+  }
+}
+
+/* ----------------------------- */
+/* 📱 Phones (already included) */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .mission-center {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .mission-center-left,
+  .mission-center-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mission-center-left-img {
+    width: 50%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .mission-center-right-text {
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1rem;
+    margin: 0.75rem 0 0 0;
+    line-height: 1.5;
+  }
+}
+
+/* ----------------------------- */
+/* 💻 Tablets (769px–1024px) */
+/* ----------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mission-center {
+    padding: 2rem 3rem;
+    gap: 2rem;
+  }
+
+  .mission-center-left {
+    width: 45%;
+  }
+
+  .mission-center-right {
+    width: 50%;
+  }
+
+  .mission-center-left-img {
+    width: 70%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+/* -------------------------------- */
+/* 🖥️ MacBook Air / Laptops (1025px–1440px) */
+/* -------------------------------- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .mission-center {
+    padding: 3rem 6rem;
+    gap: 3rem;
+  }
+
+  .mission-center-left {
+    width: 40%;
+  }
+
+  .mission-center-right {
+    width: 55%;
+  }
+
+  .mission-center-left-img {
+    width: 75%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+}
+
+
+/* 💻 Target 1025px to 1114px specifically */
+
+/* ----------------------------------- */
+/* 📱 Phones (up to 768px) */
+/* ----------------------------------- */
+@media (max-width: 768px) {
+  .mission-center {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    align-items: center;
+  }
+
+  .mission-center-left,
+  .mission-center-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mission-center-left-img {
+    width: 55%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .mission-center-right-text {
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2rem;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+/* ----------------------------------- */
+/* 💻 Tablets (769px to 1024px) */
+/* ----------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mission-center {
+    padding: 2rem 2.5rem;
+    gap: 2rem;
+  }
+
+  .mission-center-left {
+    width: 45%;
+  }
+
+  .mission-center-right {
+    width: 50%;
+    padding: 0;
+  }
+
+  .mission-center-left-img {
+    width: 65%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2.4rem;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+/* ----------------------------------- */
+/* 🖥️ Laptops / MacBook Air (1025px to 1440px) */
+/* ----------------------------------- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .mission-center {
+    padding: 3rem 6rem;
+    gap: 3rem;
+  }
+
+  .mission-center-left {
+    width: 40%;
+  }
+
+  .mission-center-right {
+    width: 55%;
+  }
+
+  .mission-center-left-img {
+    width: 70%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2.6rem;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+}
+
+/* ----------------------------------- */
+/* 🖥️ Mid-sized Screens (1025px to 1150px) Fix */
+/* ----------------------------------- */
+@media (min-width: 1025px) and (max-width: 1150px) {
+  .mission-center {
+    gap: 2rem;
+    padding: 2rem 3rem;
+  }
+
+  .mission-center-left {
+    width: 42%;
+  }
+
+  .mission-center-right {
+    width: 53%;
+    padding: 0;
+  }
+
+  .mission-center-left-img {
+    width: 65%;
+  }
+
+  .mission-center-left-img-white img {
+    max-width: 75%;
+    max-height: 75%;
+  }
+
+  .mission-center-right-text h2 {
+    font-size: 2.3rem;
+  }
+
+  .mission-center-right-text p {
+    font-size: 1.05rem;
+  }
+}
